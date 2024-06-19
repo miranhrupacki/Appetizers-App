@@ -17,6 +17,12 @@
 		8A1E01022C2199B300DC1C19 /* AppetizerListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1E01012C2199B300DC1C19 /* AppetizerListView.swift */; };
 		8A1E01042C2199BC00DC1C19 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1E01032C2199BC00DC1C19 /* AccountView.swift */; };
 		8A1E01062C2199C500DC1C19 /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1E01052C2199C500DC1C19 /* OrderView.swift */; };
+		8A1E01082C219E4600DC1C19 /* Appetizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1E01072C219E4600DC1C19 /* Appetizer.swift */; };
+		8A1E010A2C21AA9900DC1C19 /* AppetizerListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1E01092C21AA9900DC1C19 /* AppetizerListCell.swift */; };
+		8A1E010C2C22258D00DC1C19 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1E010B2C22258D00DC1C19 /* NetworkManager.swift */; };
+		8A1E010E2C22267000DC1C19 /* APError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1E010D2C22267000DC1C19 /* APError.swift */; };
+		8A1E01102C222E1F00DC1C19 /* AppetizerListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1E010F2C222E1F00DC1C19 /* AppetizerListViewModel.swift */; };
+		8A1E01122C22C82900DC1C19 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1E01112C22C82900DC1C19 /* Alert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +56,12 @@
 		8A1E01012C2199B300DC1C19 /* AppetizerListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizerListView.swift; sourceTree = "<group>"; };
 		8A1E01032C2199BC00DC1C19 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		8A1E01052C2199C500DC1C19 /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
+		8A1E01072C219E4600DC1C19 /* Appetizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appetizer.swift; sourceTree = "<group>"; };
+		8A1E01092C21AA9900DC1C19 /* AppetizerListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizerListCell.swift; sourceTree = "<group>"; };
+		8A1E010B2C22258D00DC1C19 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		8A1E010D2C22267000DC1C19 /* APError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APError.swift; sourceTree = "<group>"; };
+		8A1E010F2C222E1F00DC1C19 /* AppetizerListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizerListViewModel.swift; sourceTree = "<group>"; };
+		8A1E01112C22C82900DC1C19 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +119,12 @@
 				8A1E01012C2199B300DC1C19 /* AppetizerListView.swift */,
 				8A1E01032C2199BC00DC1C19 /* AccountView.swift */,
 				8A1E01052C2199C500DC1C19 /* OrderView.swift */,
+				8A1E01072C219E4600DC1C19 /* Appetizer.swift */,
+				8A1E01092C21AA9900DC1C19 /* AppetizerListCell.swift */,
+				8A1E010B2C22258D00DC1C19 /* NetworkManager.swift */,
+				8A1E010D2C22267000DC1C19 /* APError.swift */,
+				8A1E010F2C222E1F00DC1C19 /* AppetizerListViewModel.swift */,
+				8A1E01112C22C82900DC1C19 /* Alert.swift */,
 			);
 			path = "SwiftUI-SA-Appetizers";
 			sourceTree = "<group>";
@@ -266,9 +284,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A1E01082C219E4600DC1C19 /* Appetizer.swift in Sources */,
+				8A1E010E2C22267000DC1C19 /* APError.swift in Sources */,
+				8A1E010A2C21AA9900DC1C19 /* AppetizerListCell.swift in Sources */,
+				8A1E01102C222E1F00DC1C19 /* AppetizerListViewModel.swift in Sources */,
 				8A1E01042C2199BC00DC1C19 /* AccountView.swift in Sources */,
 				8A1E00DA2C2197EA00DC1C19 /* AppetizerTabView.swift in Sources */,
+				8A1E010C2C22258D00DC1C19 /* NetworkManager.swift in Sources */,
 				8A1E00D82C2197EA00DC1C19 /* SwiftUI_SA_AppetizersApp.swift in Sources */,
+				8A1E01122C22C82900DC1C19 /* Alert.swift in Sources */,
 				8A1E01022C2199B300DC1C19 /* AppetizerListView.swift in Sources */,
 				8A1E01062C2199C500DC1C19 /* OrderView.swift in Sources */,
 			);
