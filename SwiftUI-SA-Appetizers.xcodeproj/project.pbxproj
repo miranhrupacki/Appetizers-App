@@ -24,6 +24,9 @@
 		8A1E01102C222E1F00DC1C19 /* AppetizerListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1E010F2C222E1F00DC1C19 /* AppetizerListViewModel.swift */; };
 		8A1E01122C22C82900DC1C19 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1E01112C22C82900DC1C19 /* Alert.swift */; };
 		8A1E01142C2406EA00DC1C19 /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1E01132C2406EA00DC1C19 /* RemoteImage.swift */; };
+		8A1E01222C245CFA00DC1C19 /* AppetizerDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1E01212C245CFA00DC1C19 /* AppetizerDetailView.swift */; };
+		8A1E01242C245E5700DC1C19 /* ConfirmButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1E01232C245E5700DC1C19 /* ConfirmButton.swift */; };
+		8A1E01272C2475F900DC1C19 /* DismissXButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1E01262C2475F900DC1C19 /* DismissXButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +67,9 @@
 		8A1E010F2C222E1F00DC1C19 /* AppetizerListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizerListViewModel.swift; sourceTree = "<group>"; };
 		8A1E01112C22C82900DC1C19 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		8A1E01132C2406EA00DC1C19 /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
+		8A1E01212C245CFA00DC1C19 /* AppetizerDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizerDetailView.swift; sourceTree = "<group>"; };
+		8A1E01232C245E5700DC1C19 /* ConfirmButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmButton.swift; sourceTree = "<group>"; };
+		8A1E01262C2475F900DC1C19 /* DismissXButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissXButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +170,7 @@
 		8A1E01162C245B7E00DC1C19 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8A1E01252C2475B700DC1C19 /* Buttons */,
 				8A1E01202C245C3B00DC1C19 /* Cells */,
 				8A1E011F2C245C3800DC1C19 /* Image */,
 			);
@@ -175,6 +182,7 @@
 			children = (
 				8A1E010F2C222E1F00DC1C19 /* AppetizerListViewModel.swift */,
 				8A1E01012C2199B300DC1C19 /* AppetizerListView.swift */,
+				8A1E01212C245CFA00DC1C19 /* AppetizerDetailView.swift */,
 			);
 			path = AppetizerListView;
 			sourceTree = "<group>";
@@ -243,6 +251,15 @@
 				8A1E01092C21AA9900DC1C19 /* AppetizerListCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		8A1E01252C2475B700DC1C19 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				8A1E01232C245E5700DC1C19 /* ConfirmButton.swift */,
+				8A1E01262C2475F900DC1C19 /* DismissXButton.swift */,
+			);
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -376,6 +393,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A1E01082C219E4600DC1C19 /* Appetizer.swift in Sources */,
+				8A1E01272C2475F900DC1C19 /* DismissXButton.swift in Sources */,
 				8A1E010E2C22267000DC1C19 /* APError.swift in Sources */,
 				8A1E010A2C21AA9900DC1C19 /* AppetizerListCell.swift in Sources */,
 				8A1E01142C2406EA00DC1C19 /* RemoteImage.swift in Sources */,
@@ -383,7 +401,9 @@
 				8A1E01042C2199BC00DC1C19 /* AccountView.swift in Sources */,
 				8A1E00DA2C2197EA00DC1C19 /* AppetizerTabView.swift in Sources */,
 				8A1E010C2C22258D00DC1C19 /* NetworkManager.swift in Sources */,
+				8A1E01222C245CFA00DC1C19 /* AppetizerDetailView.swift in Sources */,
 				8A1E00D82C2197EA00DC1C19 /* SwiftUI_SA_AppetizersApp.swift in Sources */,
+				8A1E01242C245E5700DC1C19 /* ConfirmButton.swift in Sources */,
 				8A1E01122C22C82900DC1C19 /* Alert.swift in Sources */,
 				8A1E01022C2199B300DC1C19 /* AppetizerListView.swift in Sources */,
 				8A1E01062C2199C500DC1C19 /* OrderView.swift in Sources */,
