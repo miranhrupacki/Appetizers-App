@@ -9,66 +9,66 @@ import SwiftUI
 
 struct AppetizerDetailView: View {
     var appetizer: Appetizer
+    @Binding var isShowingDetails: Bool
     
     var body: some View {
-        ZStack(alignment: .topTrailing) {
+        VStack {
             AppetizerRemoteImage(urlString: appetizer.imageURL)
-                       .frame(maxWidth: .infinity, maxHeight: 300)
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 300, height: 225)
             
-            Button {
+            VStack {
+                Text(appetizer.name)
+                    .font(.title2)
+                    .fontWeight(.semibold)
                 
-            } label: {
-                Image(systemName: "plus")
-                    .font(.title.weight(.regular))
+                Text(appetizer.description)
+                    .multilineTextAlignment(.center)
+                    .font(.body)
                     .padding()
-                    .background(.white)
-                    .foregroundColor(.black)
-                    .clipShape(Circle())
+                
+                HStack(spacing: 40) {
+                    NutritionInfo(title: "Calories", value: appetizer.calories)
+                    NutritionInfo(title: "Carbs", value: appetizer.carbs)
+                    NutritionInfo(title: "Protein", value: appetizer.protein)
+                }
             }
-            .padding()
-        }
-        
 
-        VStack(alignment: .center, spacing: 20) {
-            Text(appetizer.name)
-                .font(.title)
-                .fontWeight(.bold)
-                .foregroundStyle(.black)
-            
-            Text(appetizer.description)
-                .font(.subheadline)
-                .fontWeight(.regular)
-                .foregroundStyle(.black)
-                        
-            HStack(spacing: 40) {
-                VStack(alignment: .center, spacing: 10) {
-                    Text("Calories")
-                        .fontWeight(.bold)
-                    Text("\(appetizer.calories)")
-                }
-                
-                VStack(alignment: .center, spacing: 10) {
-                    Text("Carbs")
-                        .fontWeight(.bold)
-                    Text("\(appetizer.carbs) g")
-                }
-                
-                VStack(alignment: .center, spacing: 10) {
-                    Text("Protein")
-                        .fontWeight(.bold)
-                    Text("\(appetizer.protein) g")
-                }
-            }
-            
             Spacer()
             
             ConfirmButton(title: "$\(appetizer.price) - Add To Order")
-            
-            Spacer()
+                .padding(.bottom, 30)
         }
+        .frame(width: 300, height: 525)
+        .background(.white)
+        .cornerRadius(12)
+        .shadow(radius: 40)
+        .overlay(Button {
+            isShowingDetails = false
+        } label: {
+            DismissXButton()
+        }
+            .padding(), alignment: .topTrailing)
     }
 }
 
 #Preview {
-    AppetizerDetailView(appetizer: MockData.sampleAppetizer)
+    AppetizerDetailView(appetizer: MockData.sampleAppetizer, isShowingDetails: .constant(false))
+}
+
+struct NutritionInfo: View {
+    let title: String
+    let value: Int
+
+    var body: some View {
+        VStack(alignment: .center, spacing: 5) {
+            Text(title)
+                .bold()
+                .font(.caption)
+            Text("\(value)")
+                .foregroundStyle(.secondary)
+                .fontWeight(.semibold)
+                .italic()
+        }
+    }
 }
