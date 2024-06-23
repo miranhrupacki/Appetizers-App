@@ -16,12 +16,14 @@ struct AppetizerListView: View {
             NavigationView {
                 List(viewModel.appetizers) { appetizer in
                     AppetizerListCell(appetizer: appetizer)
+                        .listRowSeparator(.hidden)
                         .onTapGesture {
                             viewModel.selectedAppetizer = appetizer
                             viewModel.isShowingDetail = true
                         }
                 }
                 .navigationTitle("🍟 Appetizers")
+                .listStyle(.plain)
                 .disabled(viewModel.isShowingDetail)
             }
             .onAppear {
@@ -29,11 +31,12 @@ struct AppetizerListView: View {
             }
             .blur(radius: viewModel.isShowingDetail ? 20 : 0)
             
+//            $viewModel.isShowingDetail.wrappedValue same as viewModel.isShowingDetail
             if viewModel.isShowingDetail {
                 AppetizerDetailView(appetizer: viewModel.selectedAppetizer ?? MockData.sampleAppetizer, isShowingDetails: $viewModel.isShowingDetail)
             }
             
-            if viewModel.isLoading {
+            if viewModel.isLoading && viewModel.appetizers.isEmpty {
                 ProgressView()
                     .controlSize(.large)
                     .progressViewStyle(.circular)
