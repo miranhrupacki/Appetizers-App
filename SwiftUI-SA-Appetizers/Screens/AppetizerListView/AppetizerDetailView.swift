@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct AppetizerDetailView: View {
+    @EnvironmentObject var order: Order
     var appetizer: Appetizer
     @Binding var isShowingDetails: Bool
     
@@ -36,11 +37,17 @@ struct AppetizerDetailView: View {
 
             Spacer()
             
-            ConfirmButton(title: "$\(appetizer.price) - Add To Order")
-                .padding(.bottom, 30)
+            Button {
+                order.add(appetizer)
+                isShowingDetails = false
+            } label: {
+                Text("$\(appetizer.price, specifier: "%.2f") - Add To Order")
+            }
+            .modifier(StandardButtonStyle())
+            .padding(.bottom, 30)
         }
         .frame(width: 300, height: 525)
-        .background(.white)
+        .background(Color(uiColor: .systemBackground))
         .cornerRadius(12)
         .shadow(radius: 40)
         .overlay(Button {
